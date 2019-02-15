@@ -1,0 +1,20 @@
+//Brandon Manuel Pérez Balandrano 1603497
+
+//Cambio del color de fondo al dar clic dentro del área de un cuadrado.
+
+function setup() {
+    createCanvas(400,400);
+}
+
+function draw(){
+    if ((mouseIsPressed) && (mouseX <= 250) && (mouseX >150) && (mouseY <= 250) && (mouseY > 150)){
+        fill(0,240,0);
+        rect(0,0,400,400);
+    }
+    else {
+        fill(180);
+        rect(0,0,400,400);
+    }
+    fill(255);
+    rect(150,150,100,100);
+}
