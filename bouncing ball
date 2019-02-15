@@ -1,0 +1,40 @@
+//Brandon Manuel Pérez Balandrano 1603497
+
+//Círculo que rebota a lo ancho de la pantalla.
+
+var b = {
+    x : 0,
+    y : 0,
+    s : 5
+};
+
+function setup() {
+    createCanvas(400,400);
+    b.x = width/2;
+    b.y = height/2;
+    fill(255,0,0);
+}
+
+function draw() {
+    background(0);
+    show();
+    move();
+    bounce();
+}
+
+function show() {
+    ellipse(b.x,b.y,40,40);
+}
+
+function move() {
+    b.x = b.x + b.s;
+}
+
+function bounce() {
+    if (b.x > width - 20){
+        b.s = -b.s;
+    }
+    if (b.x < 20) {
+        b.s = -b.s;
+    }
+}
